@@ -26,8 +26,8 @@ body{
 #btn{
     padding:10px  30px;
     font-size: 15px;
+    letter-spacing: 2px;
 }
-
 #height , #weight{
     margin-bottom: 20px;
     margin-top: 20px;
@@ -38,8 +38,8 @@ body{
     font-size: 20px;
 }
 #output{
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: -10px;
 }
 .wrapper{
     border: 2px solid white;
