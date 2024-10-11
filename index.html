@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator with JavaScript</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>BMI-Calculator</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>BMI Calculator</h1>
     <div class="wrapper">
+        <video autoplay loop muted  class="background-video" >
+            <source src="./assets/video/background-video-2.mp4" type="video/mp4">
+        </video>
+
+        <h1>BMI Calculator</h1>
         <p>Height in CM:
             <input type="text" id="height"><br><span id="height_error"></span>
         </p>
@@ -22,5 +24,6 @@
         <button id="btn">Calculate</button>
         <p id="output"></p>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
