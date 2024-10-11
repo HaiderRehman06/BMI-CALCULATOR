@@ -1,23 +1,39 @@
-let weightInput = document.getElementById('weight');
-let heightInput = document.getElementById('height');
-let calculateBtn = document.getElementById('calculate-btn');
-let bmiResultElement = document.getElementById('bmi-result');
-let categoryMsgElement = document.getElementById('category-msg');
+let button = document.getElementById('btn');
 
+button.addEventListener('click', () => {
+    const height = parseInt(document.getElementById('height').value);
+    const weight = parseInt(document.getElementById('weight').value);
+    const result = document.getElementById('output');
+    let height_status=false, weight_status=false;
 
-calculateBtn.addEventListener('click', calculateBMI);
-
-function calculateBMI() {
-    
-    const weight = parseFloat(weightInput.value);
-    const height = parseFloat(heightInput.value);
-
-    if (!weight || !height) {
-        alert('Please fill out both fields.');
-        return;
+    if(height === '' || isNaN(height) || (height <= 0)){
+        document.getElementById('height_error').innerHTML = 'Please provide a valid height';
+    }else{
+        document.getElementById('height_error').innerHTML = '';
+        height_status=true;
     }
-    if (weight <= 0 || height <= 0) {
-        alert('Please enter positive numbers for weight and height.');
-        return;
+
+    if(weight === '' || isNaN(weight) || (weight <= 0)){
+        document.getElementById('weight_error').innerHTML = 'Please provide a valid weight';
+    }else{
+        document.getElementById('weight_error').innerHTML = '';
+        weight_status=true;
+    }
+
+    if(height_status && weight_status){
+        const bmi = (weight / ((height*height)/10000)).toFixed(2);
+
+        if(bmi < 18.6){
+            result.innerHTML = 'Under weight : ' + bmi;
+        }else if(bmi >= 18.6 && bmi < 24.9){
+            result.innerHTML = 'Normal : ' + bmi;
+        }else if(bmi >= 25 && bmi < 29.9 ){
+            result.innerHTML = 'Overweight : ' + bmi;
+        }else if(bmi >= 30 ){
+            result.innerHTML = 'Obesity : ' + bmi;
+        }else{
+        alert('The form has errors');
+        result.innerHTML = '';
     }
 }
+});
