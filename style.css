@@ -23,6 +23,10 @@ body{
 .wrapper h1{
     margin-bottom: 30px;
 }
+#btn{
+    padding:10px  30px;
+    font-size: 15px;
+}
 
 #height , #weight{
     margin-bottom: 20px;
@@ -35,6 +39,7 @@ body{
 }
 #output{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 .wrapper{
     border: 2px solid white;

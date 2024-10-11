@@ -19,7 +19,7 @@ button.addEventListener('click', () => {
         document.getElementById('weight_error').innerHTML = '';
         weight_status=true;
     }
-
+    
     if(height_status && weight_status){
         const bmi = (weight / ((height*height)/10000)).toFixed(2);
 
