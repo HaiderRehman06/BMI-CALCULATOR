@@ -27,11 +27,20 @@ body{
 #btn{
     margin-top: 20px;
     padding:10px  40px;
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 2px;
+    font-weight: 400;
+}
+#btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
 }
 
 #height , #weight{
+    margin-left:30px ;
     margin-bottom: 20px;
     margin-top: 20px;
     height: 40px;
